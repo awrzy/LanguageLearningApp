@@ -10,37 +10,38 @@ using System.Windows.Forms;
 
 namespace LanguageLearningApp
 {
-    public partial class HomePage : Form
+    public partial class HomeForm : Form
     {
-        public HomePage()
+        public HomeForm()
         {
             InitializeComponent();
+            ShowIcon = false;
         }
 
         private void pictureBoxEn_Click(object sender, EventArgs e)
         {
-            EnglishPage EngForm = new EnglishPage();
+            EnglishForm EngForm = new EnglishForm();
             EngForm.Show();
             this.Hide();
         }
 
         private void pictureBoxDe_Click(object sender, EventArgs e)
         {
-            DeutschPage DeForm = new DeutschPage();
+            DeutschForm DeForm = new DeutschForm();
             DeForm.Show();
             this.Hide();
         }
 
         private void pictureBoxFr_Click(object sender, EventArgs e)
         {
-            FrenchPage FrForm = new FrenchPage();
+            FrenchForm FrForm = new FrenchForm();
             FrForm.Show();
             this.Hide();
         }
 
         private void pictureBoxEs_Click(object sender, EventArgs e)
         {
-            SpanishPage EsForm = new SpanishPage();
+            SpanishForm EsForm = new SpanishForm();
             EsForm.Show();
             this.Hide();
         }

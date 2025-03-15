@@ -1,6 +1,6 @@
 ﻿namespace LanguageLearningApp
 {
-    partial class HomePage
+    partial class HomeForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.labelLanguageSelect = new System.Windows.Forms.Label();
             this.labelEn = new System.Windows.Forms.Label();
             this.labelDe = new System.Windows.Forms.Label();
@@ -47,17 +48,19 @@
             // 
             this.labelLanguageSelect.AutoSize = true;
             this.labelLanguageSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLanguageSelect.Location = new System.Drawing.Point(309, 84);
+            this.labelLanguageSelect.ForeColor = System.Drawing.Color.White;
+            this.labelLanguageSelect.Location = new System.Drawing.Point(421, 171);
             this.labelLanguageSelect.Name = "labelLanguageSelect";
-            this.labelLanguageSelect.Size = new System.Drawing.Size(135, 20);
+            this.labelLanguageSelect.Size = new System.Drawing.Size(150, 20);
             this.labelLanguageSelect.TabIndex = 4;
-            this.labelLanguageSelect.Text = "Я хочу изучать";
+            this.labelLanguageSelect.Text = "Я хочу изучать...";
             // 
             // labelEn
             // 
             this.labelEn.AutoSize = true;
             this.labelEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEn.Location = new System.Drawing.Point(87, 249);
+            this.labelEn.ForeColor = System.Drawing.Color.White;
+            this.labelEn.Location = new System.Drawing.Point(199, 336);
             this.labelEn.Name = "labelEn";
             this.labelEn.Size = new System.Drawing.Size(94, 16);
             this.labelEn.TabIndex = 5;
@@ -67,7 +70,8 @@
             // 
             this.labelDe.AutoSize = true;
             this.labelDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDe.Location = new System.Drawing.Point(253, 249);
+            this.labelDe.ForeColor = System.Drawing.Color.White;
+            this.labelDe.Location = new System.Drawing.Point(365, 336);
             this.labelDe.Name = "labelDe";
             this.labelDe.Size = new System.Drawing.Size(81, 16);
             this.labelDe.TabIndex = 6;
@@ -77,7 +81,8 @@
             // 
             this.labelFr.AutoSize = true;
             this.labelFr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFr.Location = new System.Drawing.Point(397, 249);
+            this.labelFr.ForeColor = System.Drawing.Color.White;
+            this.labelFr.Location = new System.Drawing.Point(509, 336);
             this.labelFr.Name = "labelFr";
             this.labelFr.Size = new System.Drawing.Size(107, 16);
             this.labelFr.TabIndex = 7;
@@ -87,7 +92,8 @@
             // 
             this.labelEs.AutoSize = true;
             this.labelEs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEs.Location = new System.Drawing.Point(568, 249);
+            this.labelEs.ForeColor = System.Drawing.Color.White;
+            this.labelEs.Location = new System.Drawing.Point(680, 336);
             this.labelEs.Name = "labelEs";
             this.labelEs.Size = new System.Drawing.Size(87, 16);
             this.labelEs.TabIndex = 8;
@@ -95,8 +101,8 @@
             // 
             // pictureBoxEs
             // 
-            this.pictureBoxEs.Image = global::LanguageLearningApp.Properties.Resources.es;
-            this.pictureBoxEs.Location = new System.Drawing.Point(571, 146);
+            this.pictureBoxEs.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEs.Image")));
+            this.pictureBoxEs.Location = new System.Drawing.Point(683, 233);
             this.pictureBoxEs.Name = "pictureBoxEs";
             this.pictureBoxEs.Size = new System.Drawing.Size(100, 100);
             this.pictureBoxEs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -106,8 +112,8 @@
             // 
             // pictureBoxFr
             // 
-            this.pictureBoxFr.Image = global::LanguageLearningApp.Properties.Resources.fr;
-            this.pictureBoxFr.Location = new System.Drawing.Point(400, 146);
+            this.pictureBoxFr.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFr.Image")));
+            this.pictureBoxFr.Location = new System.Drawing.Point(512, 233);
             this.pictureBoxFr.Name = "pictureBoxFr";
             this.pictureBoxFr.Size = new System.Drawing.Size(100, 100);
             this.pictureBoxFr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -117,8 +123,8 @@
             // 
             // pictureBoxDe
             // 
-            this.pictureBoxDe.Image = global::LanguageLearningApp.Properties.Resources.de;
-            this.pictureBoxDe.Location = new System.Drawing.Point(240, 146);
+            this.pictureBoxDe.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDe.Image")));
+            this.pictureBoxDe.Location = new System.Drawing.Point(352, 233);
             this.pictureBoxDe.Name = "pictureBoxDe";
             this.pictureBoxDe.Size = new System.Drawing.Size(100, 100);
             this.pictureBoxDe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -128,8 +134,8 @@
             // 
             // pictureBoxEn
             // 
-            this.pictureBoxEn.Image = global::LanguageLearningApp.Properties.Resources.en;
-            this.pictureBoxEn.Location = new System.Drawing.Point(90, 146);
+            this.pictureBoxEn.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEn.Image")));
+            this.pictureBoxEn.Location = new System.Drawing.Point(202, 233);
             this.pictureBoxEn.Name = "pictureBoxEn";
             this.pictureBoxEn.Size = new System.Drawing.Size(100, 100);
             this.pictureBoxEn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -137,11 +143,12 @@
             this.pictureBoxEn.TabStop = false;
             this.pictureBoxEn.Click += new System.EventHandler(this.pictureBoxEn_Click);
             // 
-            // HomePage
+            // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.labelEs);
             this.Controls.Add(this.labelFr);
             this.Controls.Add(this.labelDe);
@@ -151,7 +158,9 @@
             this.Controls.Add(this.pictureBoxFr);
             this.Controls.Add(this.pictureBoxDe);
             this.Controls.Add(this.pictureBoxEn);
-            this.Name = "HomePage";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1000, 600);
+            this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выбор языка";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEs)).EndInit();

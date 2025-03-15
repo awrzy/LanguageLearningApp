@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace LanguageLearningApp
 {
-    public partial class DeutschPage : Form
+    public partial class SpanishForm : Form
     {
-        public DeutschPage()
+        public SpanishForm()
         {
             InitializeComponent();
+            ShowIcon = false;
+            ShowInTaskbar = false;
         }
 
-        private void buttonReselect_Click(object sender, EventArgs e)
+        private void pictureBoxBack_Click(object sender, EventArgs e)
         {
-            HomePage homePage = new HomePage();
+            HomeForm homePage = new HomeForm();
             homePage.Show();
             this.Hide();
         }
