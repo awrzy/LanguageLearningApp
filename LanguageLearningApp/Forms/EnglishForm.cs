@@ -12,12 +12,12 @@ namespace LanguageLearningApp
 {
     public partial class EnglishForm : Form
     {
-        Controls.ModuleView ucModuleView = new Controls.ModuleView();
+        Controls.ModuleViewEng ucModuleViewEng = new Controls.ModuleViewEng();
+
         public EnglishForm()
         {
             InitializeComponent();
             ShowIcon = false;
-            ShowInTaskbar = false;
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
@@ -30,8 +30,8 @@ namespace LanguageLearningApp
         private void buttonLessons_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(ucModuleView);
-            ucModuleView.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(ucModuleViewEng);
+            ucModuleViewEng.Dock = DockStyle.Fill;
         }
 
         private void pictureBoxLogo_Click(object sender, EventArgs e)

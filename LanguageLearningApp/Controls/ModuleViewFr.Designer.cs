@@ -1,6 +1,6 @@
 ﻿namespace LanguageLearningApp.Controls
 {
-    partial class ModuleView
+    partial class ModuleViewFr
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuleView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuleViewFr));
             this.panelMain = new System.Windows.Forms.Panel();
-            this.pictureBoxLesson1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLesson2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLesson2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLesson1 = new System.Windows.Forms.PictureBox();
             this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLesson1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLesson2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLesson2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLesson1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.panelMain.Controls.Add(this.pictureBoxBack);
             this.panelMain.Controls.Add(this.pictureBoxLesson2);
             this.panelMain.Controls.Add(this.pictureBoxLesson1);
@@ -48,29 +49,7 @@
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(778, 561);
-            this.panelMain.TabIndex = 1;
-            // 
-            // pictureBoxLesson1
-            // 
-            this.pictureBoxLesson1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLesson1.Image")));
-            this.pictureBoxLesson1.Location = new System.Drawing.Point(131, 85);
-            this.pictureBoxLesson1.Name = "pictureBoxLesson1";
-            this.pictureBoxLesson1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxLesson1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxLesson1.TabIndex = 0;
-            this.pictureBoxLesson1.TabStop = false;
-            this.pictureBoxLesson1.Click += new System.EventHandler(this.pictureBoxLesson1_Click);
-            // 
-            // pictureBoxLesson2
-            // 
-            this.pictureBoxLesson2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLesson2.Image")));
-            this.pictureBoxLesson2.Location = new System.Drawing.Point(231, 85);
-            this.pictureBoxLesson2.Name = "pictureBoxLesson2";
-            this.pictureBoxLesson2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxLesson2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxLesson2.TabIndex = 1;
-            this.pictureBoxLesson2.TabStop = false;
-            this.pictureBoxLesson2.Click += new System.EventHandler(this.pictureBoxLesson2_Click);
+            this.panelMain.TabIndex = 3;
             // 
             // pictureBoxBack
             // 
@@ -83,28 +62,48 @@
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             // 
-            // ModuleView
+            // pictureBoxLesson2
+            // 
+            this.pictureBoxLesson2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLesson2.Image")));
+            this.pictureBoxLesson2.Location = new System.Drawing.Point(231, 85);
+            this.pictureBoxLesson2.Name = "pictureBoxLesson2";
+            this.pictureBoxLesson2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxLesson2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxLesson2.TabIndex = 1;
+            this.pictureBoxLesson2.TabStop = false;
+            // 
+            // pictureBoxLesson1
+            // 
+            this.pictureBoxLesson1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLesson1.Image")));
+            this.pictureBoxLesson1.Location = new System.Drawing.Point(131, 85);
+            this.pictureBoxLesson1.Name = "pictureBoxLesson1";
+            this.pictureBoxLesson1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxLesson1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxLesson1.TabIndex = 0;
+            this.pictureBoxLesson1.TabStop = false;
+            this.pictureBoxLesson1.Click += new System.EventHandler(this.pictureBoxLesson1_Click);
+            // 
+            // ModuleViewFr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.Controls.Add(this.panelMain);
-            this.Name = "ModuleView";
+            this.Name = "ModuleViewFr";
             this.Size = new System.Drawing.Size(778, 561);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLesson1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLesson2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLesson2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLesson1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBoxLesson1;
         private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.PictureBox pictureBoxLesson2;
         private System.Windows.Forms.PictureBox pictureBoxBack;
+        private System.Windows.Forms.PictureBox pictureBoxLesson2;
+        private System.Windows.Forms.PictureBox pictureBoxLesson1;
     }
 }

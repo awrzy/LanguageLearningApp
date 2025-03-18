@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LanguageLearningApp.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,29 @@ namespace LanguageLearningApp
 {
     public partial class FrenchForm : Form
     {
+        Controls.ModuleViewFr ucModuleViewFr = new Controls.ModuleViewFr();
+
         public FrenchForm()
         {
             InitializeComponent();
             ShowIcon = false;
-            ShowInTaskbar = false;
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)
+        {
+            HomeForm homePage = new HomeForm();
+            homePage.Show();
+            this.Hide();
+        }
+
+        private void buttonLessons_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(ucModuleViewFr);
+            ucModuleViewFr.Dock = DockStyle.Fill;
+        }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
         {
             HomeForm homePage = new HomeForm();
             homePage.Show();

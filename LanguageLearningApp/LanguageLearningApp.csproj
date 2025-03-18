@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,23 +61,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\ModuleView.cs">
+    <Compile Include="Controls\ModuleViewDe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ModuleView.Designer.cs">
-      <DependentUpon>ModuleView.cs</DependentUpon>
+    <Compile Include="Controls\ModuleViewDe.Designer.cs">
+      <DependentUpon>ModuleViewDe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\QuizControl.cs">
+    <Compile Include="Controls\ModuleViewEng.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\QuizControl.Designer.cs">
-      <DependentUpon>QuizControl.cs</DependentUpon>
+    <Compile Include="Controls\ModuleViewEng.Designer.cs">
+      <DependentUpon>ModuleViewEng.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\QuizControl2.cs">
+    <Compile Include="Controls\ModuleViewEs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\QuizControl2.Designer.cs">
-      <DependentUpon>QuizControl2.cs</DependentUpon>
+    <Compile Include="Controls\ModuleViewEs.Designer.cs">
+      <DependentUpon>ModuleViewEs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModuleViewFr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ModuleViewFr.Designer.cs">
+      <DependentUpon>ModuleViewFr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuizControlDe1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QuizControlDe1.Designer.cs">
+      <DependentUpon>QuizControlDe1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuizControlEng1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QuizControlEng1.Designer.cs">
+      <DependentUpon>QuizControlEng1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuizControlEng2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QuizControlEng2.Designer.cs">
+      <DependentUpon>QuizControlEng2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuizControlEs1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QuizControlEs1.Designer.cs">
+      <DependentUpon>QuizControlEs1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuizControlFr1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QuizControlFr1.Designer.cs">
+      <DependentUpon>QuizControlFr1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DeutschForm.cs">
       <SubType>Form</SubType>
@@ -89,6 +140,7 @@
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Sentence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\SpanishForm.cs">
@@ -97,14 +149,32 @@
     <Compile Include="Forms\SpanishForm.Designer.cs">
       <DependentUpon>SpanishForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controls\ModuleView.resx">
-      <DependentUpon>ModuleView.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ModuleViewDe.resx">
+      <DependentUpon>ModuleViewDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\QuizControl.resx">
-      <DependentUpon>QuizControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ModuleViewEng.resx">
+      <DependentUpon>ModuleViewEng.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\QuizControl2.resx">
-      <DependentUpon>QuizControl2.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ModuleViewEs.resx">
+      <DependentUpon>ModuleViewEs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ModuleViewFr.resx">
+      <DependentUpon>ModuleViewFr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QuizControlDe1.resx">
+      <DependentUpon>QuizControlDe1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QuizControlEng1.resx">
+      <DependentUpon>QuizControlEng1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QuizControlEng2.resx">
+      <DependentUpon>QuizControlEng2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QuizControlEs1.resx">
+      <DependentUpon>QuizControlEs1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QuizControlFr1.resx">
+      <DependentUpon>QuizControlFr1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DeutschForm.resx">
       <DependentUpon>DeutschForm.cs</DependentUpon>
@@ -293,6 +363,18 @@
     <None Include="Resources\neck.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

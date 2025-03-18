@@ -34,6 +34,7 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.buttonLessons = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -72,6 +73,7 @@
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 4;
             this.pictureBoxLogo.TabStop = false;
+            this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
             // buttonLessons
             // 
@@ -87,6 +89,7 @@
             this.buttonLessons.Text = "Уроки";
             this.buttonLessons.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLessons.UseVisualStyleBackColor = false;
+            this.buttonLessons.Click += new System.EventHandler(this.buttonLessons_Click);
             // 
             // buttonProfile
             // 
@@ -103,12 +106,21 @@
             this.buttonProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonProfile.UseVisualStyleBackColor = false;
             // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(206, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(778, 561);
+            this.panelMain.TabIndex = 3;
+            // 
             // FrenchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.PanelMenu);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "FrenchForm";
@@ -129,5 +141,6 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Button buttonLessons;
         private System.Windows.Forms.Button buttonProfile;
+        private System.Windows.Forms.Panel panelMain;
     }
 }

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace LanguageLearningApp.Controls
 {
-    public partial class ModuleView : UserControl
+    public partial class ModuleViewEng : UserControl
     {
-        Controls.QuizControl ucQuizControl1 = new Controls.QuizControl();
-        Controls.QuizControl2 ucQuizControl2 = new Controls.QuizControl2();
+        Controls.QuizControlEng1 ucQuizControl1 = new Controls.QuizControlEng1();
+        Controls.QuizControlEng2 ucQuizControl2 = new Controls.QuizControlEng2();
 
-        public ModuleView()
+        public ModuleViewEng()
         {
             InitializeComponent();
         }
