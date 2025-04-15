@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LanguageLearningApp.Controls
@@ -13,6 +6,7 @@ namespace LanguageLearningApp.Controls
     public partial class ModuleViewFr : UserControl
     {
         Controls.QuizControlFr1 ucQuizControlFr1 = new Controls.QuizControlFr1();
+        Controls.QuizControlFr2 ucQuizControlFr2 = new Controls.QuizControlFr2();
 
         public ModuleViewFr()
         {
@@ -31,6 +25,13 @@ namespace LanguageLearningApp.Controls
             panelMain.Controls.Clear();
             panelMain.Controls.Add(ucQuizControlFr1);
             ucQuizControlFr1.Dock = DockStyle.Fill;
+        }
+
+        private void pictureBoxLesson2_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(ucQuizControlFr2);
+            ucQuizControlFr2.Dock = DockStyle.Fill;
         }
     }
 }

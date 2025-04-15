@@ -71,6 +71,7 @@
             this.pictureBoxLesson2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxLesson2.TabIndex = 1;
             this.pictureBoxLesson2.TabStop = false;
+            this.pictureBoxLesson2.Click += new System.EventHandler(this.pictureBoxLesson2_Click);
             // 
             // pictureBoxLesson1
             // 

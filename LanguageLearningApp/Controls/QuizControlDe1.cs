@@ -1,12 +1,8 @@
 ﻿using LanguageLearningApp.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LanguageLearningApp.Controls
@@ -32,129 +28,65 @@ namespace LanguageLearningApp.Controls
 
         private void InitializeQuestions()
         {
-            questions = new List<Question>
-    {
-        new Question
-        {
-            Text = "Выберите слово 'Кофе'",
-            Answers = new string[] { "Kaffee", "Tee", "Milch" },
-            CorrectAnswerIndex = 0,
-            ImagePaths = new string[]
+            questions = new List<Question>();
+
+            string connectionString = "Server=DESKTOP-NV8RV3L\\MSSQL;Database=LanguageLearningDB;Integrated Security=True;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                "Resources\\coffee.png",
-                "Resources\\tea.png",
-                "Resources\\milk.png"
+                conn.Open();
+
+                List<(int Id, string Text, int CorrectAnswerIndex)> loadedQuestions = new List<(int, string, int)>();
+
+                using (SqlCommand cmd = new SqlCommand("SELECT ID, QuestionText, CorrectAnswerIndex FROM QuestionsDe", conn))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string text = reader.GetString(1);
+                        int correctIndex = reader.GetInt32(2);
+                        loadedQuestions.Add((id, text, correctIndex));
+                    }
+                }
+
+                foreach (var (id, text, correctAnswerIndex) in loadedQuestions)
+                {
+                    List<string> answers = new List<string>();
+                    List<string> imagePaths = new List<string>();
+
+                    using (SqlCommand cmdAnswers = new SqlCommand("SELECT AnswerText, ImagePath FROM AnswersDe WHERE QuestionId = @id ORDER BY QuestionID", conn))
+                    {
+                        cmdAnswers.Parameters.AddWithValue("@id", id);
+
+                        using (SqlDataReader reader = cmdAnswers.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                answers.Add(reader.GetString(0));
+                                imagePaths.Add(reader.GetString(1));
+                            }
+                        }
+                    }
+
+                    if (answers.Count == 3 && imagePaths.Count == 3)
+                    {
+                        questions.Add(new Question
+                        {
+                            Text = text,
+                            Answers = answers.ToArray(),
+                            CorrectAnswerIndex = correctAnswerIndex,
+                            ImagePaths = imagePaths.ToArray()
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Вопрос с ID={id} имеет недопустимое количество ответов или изображений (не 3). Пропускается.");
+                    }
+                }
+
+                conn.Close();
             }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Соль'",
-            Answers = new string[] { "Butter", "Brot", "Salz" },
-            CorrectAnswerIndex = 2,
-            ImagePaths = new string[]
-            {
-                "Resources\\butter.png",
-                "Resources\\bread.png",
-                "Resources\\salt.png"
-            }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Яблоко'",
-            Answers = new string[] { "Apfel", "Banane", "Orange" },
-            CorrectAnswerIndex = 0,
-            ImagePaths = new string[]
-            {
-                "Resources\\apple.png",
-                "Resources\\banana.png",
-                "Resources\\orange.png"
-            }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Книга'",
-            Answers = new string[] { "Buch", "Stift", "Tisch" },
-            CorrectAnswerIndex = 0,
-            ImagePaths = new string[]
-            {
-                "Resources\\book.png",
-                "Resources\\pen.png",
-                "Resources\\table.png"
-            }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Собака'",
-            Answers = new string[] { "Katze", "Hund", "Vogel" },
-            CorrectAnswerIndex = 1,
-            ImagePaths = new string[]
-            {
-                "Resources\\cat.png",
-                "Resources\\dog.png",
-                "Resources\\bird.png"
-            }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Машина'",
-            Answers = new string[] { "Fahrrad", "Auto", "Bus" },
-            CorrectAnswerIndex = 1,
-            ImagePaths = new string[]
-            {
-                "Resources\\bike.png",
-                "Resources\\car.png",
-                "Resources\\bus.png"
-            }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Стол'",
-            Answers = new string[] { "Brett", "Stuhl", "Tisch" },
-            CorrectAnswerIndex = 2,
-            ImagePaths = new string[]
-            {
-                "Resources\\board.png",
-                "Resources\\chair.png",
-                "Resources\\table.png"
-            }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Окно'",
-            Answers = new string[] { "Tür", "Fenster", "Wand" },
-            CorrectAnswerIndex = 1,
-            ImagePaths = new string[]
-            {
-                "Resources\\door.png",
-                "Resources\\window.png",
-                "Resources\\wall.png"
-            }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Цветок'",
-            Answers = new string[] { "Blume", "Baum", "Gras" },
-            CorrectAnswerIndex = 0,
-            ImagePaths = new string[]
-            {
-                "Resources\\flower.png",
-                "Resources\\tree.png",
-                "Resources\\grass.png"
-            }
-        },
-        new Question
-        {
-            Text = "Выберите слово 'Рука'",
-            Answers = new string[] { "Hand", "Fuß", "Hals" },
-            CorrectAnswerIndex = 0,
-            ImagePaths = new string[]
-            {
-                "Resources\\hand.png",
-                "Resources\\foot.png",
-                "Resources\\neck.png"
-            }
-        }
-    };
         }
 
         private void ShowQuestion(Question question)

@@ -1,6 +1,7 @@
 ﻿using LanguageLearningApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace LanguageLearningApp.Controls
 {
-    public partial class QuizControlEng2 : UserControl
+    public partial class QuizControlEs2 : UserControl
     {
         private List<Sentence> sentences;
         private int currentSentenceIndex = 0;
@@ -16,7 +17,7 @@ namespace LanguageLearningApp.Controls
         private int incorrectAnswersCount = 0;
         private List<System.Windows.Forms.Button> selectedWords = new List<System.Windows.Forms.Button>();
 
-        public QuizControlEng2()
+        public QuizControlEs2()
         {
             InitializeComponent();
             InitializeSentences();
@@ -32,7 +33,6 @@ namespace LanguageLearningApp.Controls
             buttonCheck.Click += CheckAnswerButton_Click;
             buttonReset.Click += ResetButton_Click;
         }
-
         private void InitializeSentences()
         {
             sentences = new List<Sentence>();
@@ -43,7 +43,7 @@ namespace LanguageLearningApp.Controls
                 conn.Open();
 
                 List<(int Id, string Text)> loadedSentences = new List<(int, string)>();
-                using (SqlCommand cmdSentences = new SqlCommand("SELECT Id, QuestionText FROM SentencesEng", conn))
+                using (SqlCommand cmdSentences = new SqlCommand("SELECT Id, QuestionText FROM SentencesEs", conn))
                 using (SqlDataReader reader = cmdSentences.ExecuteReader())
                 {
                     while (reader.Read())
@@ -59,7 +59,7 @@ namespace LanguageLearningApp.Controls
                     var words = new List<string>();
                     var correctOrder = new List<int>();
 
-                    using (SqlCommand cmdWords = new SqlCommand("SELECT Word, WordOrder FROM SentenceWordsEng WHERE SentenceId = @id", conn))
+                    using (SqlCommand cmdWords = new SqlCommand("SELECT Word, WordOrder FROM SentenceWordsEs WHERE SentenceId = @id", conn))
                     {
                         cmdWords.Parameters.AddWithValue("@id", sentenceId);
                         using (SqlDataReader wordReader = cmdWords.ExecuteReader())
@@ -90,7 +90,6 @@ namespace LanguageLearningApp.Controls
                 }
             }
         }
-
 
         private void ShowSentence(Sentence sentence)
         {

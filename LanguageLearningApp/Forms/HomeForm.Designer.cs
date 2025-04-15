@@ -38,6 +38,7 @@
             this.pictureBoxFr = new System.Windows.Forms.PictureBox();
             this.pictureBoxDe = new System.Windows.Forms.PictureBox();
             this.pictureBoxEn = new System.Windows.Forms.PictureBox();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDe)).BeginInit();
@@ -143,12 +144,24 @@
             this.pictureBoxEn.TabStop = false;
             this.pictureBoxEn.Click += new System.EventHandler(this.pictureBoxEn_Click);
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.Location = new System.Drawing.Point(12, 526);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 9;
+            this.buttonExit.Text = "Выйти";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelEs);
             this.Controls.Add(this.labelFr);
             this.Controls.Add(this.labelDe);
@@ -183,6 +196,7 @@
         private System.Windows.Forms.Label labelDe;
         private System.Windows.Forms.Label labelFr;
         private System.Windows.Forms.Label labelEs;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
 

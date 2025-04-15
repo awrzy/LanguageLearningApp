@@ -50,6 +50,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +69,12 @@
     </Compile>
     <Compile Include="Controls\ModuleViewDe.Designer.cs">
       <DependentUpon>ModuleViewDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuizControlDe2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QuizControlDe2.Designer.cs">
+      <DependentUpon>QuizControlDe2.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ModuleViewEng.cs">
       <SubType>UserControl</SubType>
@@ -109,11 +118,29 @@
     <Compile Include="Controls\QuizControlEs1.Designer.cs">
       <DependentUpon>QuizControlEs1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\QuizControlEs2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QuizControlEs2.Designer.cs">
+      <DependentUpon>QuizControlEs2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\QuizControlFr1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\QuizControlFr1.Designer.cs">
       <DependentUpon>QuizControlFr1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuizControlFr2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QuizControlFr2.Designer.cs">
+      <DependentUpon>QuizControlFr2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminPanelForm.Designer.cs">
+      <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DeutschForm.cs">
       <SubType>Form</SubType>
@@ -139,6 +166,12 @@
     <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Sentence.cs" />
     <Compile Include="Program.cs" />
@@ -151,6 +184,9 @@
     </Compile>
     <EmbeddedResource Include="Controls\ModuleViewDe.resx">
       <DependentUpon>ModuleViewDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QuizControlDe2.resx">
+      <DependentUpon>QuizControlDe2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ModuleViewEng.resx">
       <DependentUpon>ModuleViewEng.cs</DependentUpon>
@@ -173,8 +209,17 @@
     <EmbeddedResource Include="Controls\QuizControlEs1.resx">
       <DependentUpon>QuizControlEs1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QuizControlEs2.resx">
+      <DependentUpon>QuizControlEs2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\QuizControlFr1.resx">
       <DependentUpon>QuizControlFr1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QuizControlFr2.resx">
+      <DependentUpon>QuizControlFr2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminPanelForm.resx">
+      <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DeutschForm.resx">
       <DependentUpon>DeutschForm.cs</DependentUpon>
@@ -187,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,6 +249,7 @@
     <EmbeddedResource Include="Forms\SpanishForm.resx">
       <DependentUpon>SpanishForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -376,5 +425,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

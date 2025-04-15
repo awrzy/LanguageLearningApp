@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LanguageLearningApp.Models;
+using System;
 using System.Windows.Forms;
 
 namespace LanguageLearningApp
@@ -36,6 +37,13 @@ namespace LanguageLearningApp
         {
             SpanishForm EsForm = new SpanishForm();
             EsForm.Show();
+            this.Hide();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
             this.Hide();
         }
     }
